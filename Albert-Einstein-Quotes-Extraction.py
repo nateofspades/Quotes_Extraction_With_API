@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-# Load the api_key from the .env file
+# Load the API key from the .env file
 from dotenv import load_dotenv
 import os
 load_dotenv()
@@ -16,7 +16,6 @@ if response.status_code == 200:
     author_list = []    # All values in author_list will be the same
     image_list = []     # All values in image_list will be the same
     quote_list = []     # These values will not be the same
-    image = ''
     for quote in quotes:
         author_list.append(quote['a'])    # Retrieves the author
         image_list.append(quote['i'])     # Retrieves the image of the author
