@@ -37,3 +37,10 @@ for author in author_list:
     quotes_df = pd.concat([quotes_df, quotes_extraction_function(author)])
 
 print(quotes_df)
+
+
+### NEXT STEPS
+# Need to use time module to make sure we are not making too many requests per 30 seconds
+# Make a single dataset of all of the appropriate authors (e.g. excluding living authors)
+#    The reason this might make sense is because many authors have only a few quotes and therefore not enough for their
+#    own videos. We might therefore need to group them
