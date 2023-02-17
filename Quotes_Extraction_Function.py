@@ -29,12 +29,10 @@ def quotes_extraction_function(author):
 
     return df
 
-# print(quotes_extraction_function('Albert-Einstein'))
-
 author_list = ['Albert-Einstein', 'Abraham-Lincoln', 'Alan-Watts']
-quotes_df = pd.DataFrame({'author': [], 'image': [], 'quote': []})
 
-# Create the quotes dataframe consisting of all of the authors in author_list.
+# Create the quotes dataframe consisting of all the authors in author_list.
+quotes_df = pd.DataFrame({'author': [], 'image': [], 'quote': []})
 for author in author_list:
     quotes_df = pd.concat([quotes_df, quotes_extraction_function(author)])
 
