@@ -40,7 +40,8 @@ print(quotes_df)
 
 
 ### NEXT STEPS
-# Need to use time module to make sure we are not making too many requests per 30 seconds
+# Start by making video with Einstein quotes
+# Then I need to use time module to make sure we are not making too many requests per 30 seconds
 # Make a single dataset of all of the appropriate authors (e.g. excluding living authors)
 #    The reason this might make sense is because many authors have only a few quotes and therefore not enough for their
 #    own videos. We might therefore need to group them
