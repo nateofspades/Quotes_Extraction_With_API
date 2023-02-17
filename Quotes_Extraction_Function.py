@@ -41,7 +41,7 @@ print(quotes_df)
 
 ### NEXT STEPS
 # Start by making video with Einstein quotes:
-#   i) find text-to-speech software which allows music in the background
+#   i) find free text-to-speech software which allows music in the background
 #  ii) choose a voice + background music
 # iii) make the video; don't worry about the visual aspect of the video for now
 #  iv) create a mock YouTube channel. Don't worry about name / logo / branding; I will delete the channel afterwards
