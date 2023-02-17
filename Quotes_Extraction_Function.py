@@ -40,8 +40,12 @@ print(quotes_df)
 
 
 ### NEXT STEPS
-# Start by making video with Einstein quotes
-# Then I need to use time module to make sure we are not making too many requests per 30 seconds
-# Make a single dataset of all of the appropriate authors (e.g. excluding living authors)
+# Start by making video with Einstein quotes:
+#   i) find text-to-speech software which allows music in the background
+#  ii) choose a voice + background music
+# iii) create a mock YouTube channel. Don't worry about name / logo / branding; I will delete the channel afterwards
+#  iv) load the video to YouTube channel
+# Possible: Make a single dataset of all of the appropriate authors (e.g. excluding living authors)
 #    The reason this might make sense is because many authors have only a few quotes and therefore not enough for their
-#    own videos. We might therefore need to group them
+#    own videos. We might therefore need to group them.
+#    (If I do this then I need to use time module to make sure we are not making too many requests per 30 seconds)
