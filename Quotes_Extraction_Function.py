@@ -43,8 +43,9 @@ print(quotes_df)
 # Start by making video with Einstein quotes:
 #   i) find text-to-speech software which allows music in the background
 #  ii) choose a voice + background music
-# iii) create a mock YouTube channel. Don't worry about name / logo / branding; I will delete the channel afterwards
-#  iv) load the video to YouTube channel
+# iii) make the video; don't worry about the visual aspect of the video for now
+#  iv) create a mock YouTube channel. Don't worry about name / logo / branding; I will delete the channel afterwards
+#   v) load the video to YouTube channel
 # Possible: Make a single dataset of all of the appropriate authors (e.g. excluding living authors)
 #    The reason this might make sense is because many authors have only a few quotes and therefore not enough for their
 #    own videos. We might therefore need to group them.
