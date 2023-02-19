@@ -38,8 +38,6 @@ def quotes_extraction_function(author):
 
     return df
 
-# author_list = ['A.A. Milne', 'Albert-Einstein', 'Abraham-Lincoln']
-
 # Create the quotes dataframe consisting of all the authors in author_list (except for the ones which cause issues with the above function).
 quotes_df = pd.DataFrame({'author': [], 'image': [], 'quote': []})
 for author in author_list:
