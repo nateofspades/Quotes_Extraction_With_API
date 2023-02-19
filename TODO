@@ -1,12 +1,20 @@
 ### NEXT STEPS
-# Start by making video with Einstein quotes:
-#   i) find free text-to-speech software which allows music in the background
-#  ii) choose a voice + background music
-# iii) make the video; don't worry about the visual aspect of the video for now
-#  iv) create a mock YouTube channel. Don't worry about name / logo / branding; I will delete the channel afterwards
-#   v) load the video to YouTube channel
+# Start by making mock video using Abraham Lincoln slideshow I started. Test the placing of the quote + author, i.e. how it will look on YouTube
+    (will it be covered by the video progress bar? Will it cover the clickable icon in the bottom right which could steer users to homepage?)
+# i) make video without audio
+    * use OBS Studio to screen record Google Slides where each slide = 1 quote
+    * Use Davinci Resolve to edit the screen-recording (e.g. trim the beginning/end of video; make each slide the same length of time)
+# ii) Use murf.ai to record the audio for the video, i.e. both reading the quotes + background music (https://murf.ai/voice-over-video)
+# iii) Load video to YouTube channel
 
 
-# i) OBS Studio to screen record Google Slides with Quotes
-# ii) Davinci Resolve to edit the screen recording video (e.g. to trim the beginning / end of video, which will include navigating to/from the Google Slides)
-# iii) Use Murf.ai to record the audio (i.e. AI reading the quotes)
+
+# Choose a YouTube channel name
+# Choose a YouTube channel logo
+# Find a cool consistent design for each slideshow:
+    * how will quotes be displayed?
+    * which font for quotes
+    * color of background?
+    * location of author's image on screen (fortunately they are always the same size in Quotes.csv)
+# Find a voice from murf.ai that will be used. (Will it always be the same? Maybe choose one for men, one for women)
+# Find background music from murf.ai that will be used. (Will it always be the same?)
