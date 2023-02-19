@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import time
 
 # Load the API key from the .env file
 from dotenv import load_dotenv
@@ -7,6 +8,14 @@ import os
 load_dotenv()
 api_key = os.getenv("api_key")
 
+# Acquire the list of all authors on ZenQuotes.
+response = requests.get(f"https://zenquotes.io/api/authors/{api_key}")
+author_dicts = response.json()
+author_list = []
+for dict in author_dicts:
+    author_list.append(dict['a'].replace(' ', '-')) # Spaces between names need to be replaced with hyphens for the API for quote extraction to work
+
+# Create the function which extracts all quotes from an input author.
 def quotes_extraction_function(author):
     """
     :param author: One of the authors from ZenQuotes.io https://zenquotes.io/authors. Author names are separated by hyphens.
@@ -29,24 +38,18 @@ def quotes_extraction_function(author):
 
     return df
 
-author_list = ['Albert-Einstein', 'Abraham-Lincoln', 'Alan-Watts']
+# author_list = ['A.A. Milne', 'Albert-Einstein', 'Abraham-Lincoln']
 
-# Create the quotes dataframe consisting of all the authors in author_list.
+# Create the quotes dataframe consisting of all the authors in author_list (except for the ones which cause issues with the above function).
 quotes_df = pd.DataFrame({'author': [], 'image': [], 'quote': []})
 for author in author_list:
-    quotes_df = pd.concat([quotes_df, quotes_extraction_function(author)])
+    try:
+        quotes_df = pd.concat([quotes_df, quotes_extraction_function(author)])
+    except:
+        continue
+    time.sleep(6.1) # Wait 6.1 seconds before the next iteration; ZenQuotes only allows 5 API calls per 30 seconds.
 
-print(quotes_df)
+# Create the Excel file from the quotes dataframe.
+quotes_df.to_csv('Quotes.csv', index=False)
 
 
-### NEXT STEPS
-# Start by making video with Einstein quotes:
-#   i) find free text-to-speech software which allows music in the background
-#  ii) choose a voice + background music
-# iii) make the video; don't worry about the visual aspect of the video for now
-#  iv) create a mock YouTube channel. Don't worry about name / logo / branding; I will delete the channel afterwards
-#   v) load the video to YouTube channel
-# Possible: Make a single dataset of all of the appropriate authors (e.g. excluding living authors)
-#    The reason this might make sense is because many authors have only a few quotes and therefore not enough for their
-#    own videos. We might therefore need to group them.
-#    (If I do this then I need to use time module to make sure we are not making too many requests per 30 seconds)

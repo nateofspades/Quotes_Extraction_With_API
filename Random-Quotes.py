@@ -1,7 +1,7 @@
 import requests
 import time
-import pprint
 
+# Generates a list of 20 random quotes, along with the author of each quote.
 quote_list = []
 for i in range(1, 21):
     response = requests.get('https://zenquotes.io/api/random')
@@ -12,6 +12,5 @@ for i in range(1, 21):
     if i%5 == 0:
         time.sleep(35)
 
+# Eliminate any duplicate quotes that might have occurred.
 quote_list = list(set(quote_list))
-
-print(quote_list)
