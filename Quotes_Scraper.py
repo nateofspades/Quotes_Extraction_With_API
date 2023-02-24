@@ -54,6 +54,6 @@ def quotes_first_30_pages(first_page_link):
 
     return df
 
-# Create Excel sheet with Einstein quotes using first 30 pages
-# df = quotes_first_30_pages("https://www.azquotes.com/author/4399-Albert_Einstein")
-# df.to_csv("Einstein_Quotes.csv", index=False)
+# Create Excel sheet for first 30 pages of author's quotes
+df = quotes_first_30_pages("https://www.azquotes.com/author/13382-William_Shakespeare")
+df.to_csv("William_Shakespeare_Quotes.csv", index=False)
